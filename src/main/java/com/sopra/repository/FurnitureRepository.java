@@ -38,17 +38,9 @@ public class FurnitureRepository implements IFurnitureRepository<FurnitureInvent
 	@Override
 	public FurnitureInventory read(int id) {
 		
-		Query<FurnitureInventory> q = App.s.createQuery("FROM FurnitureInventory where id =: x");
-		q.setParameter("x", id);
+		FurnitureInventory f = App.s.get(FurnitureInventory.class, id);
 		
-		List<FurnitureInventory> lst = new ArrayList<FurnitureInventory>();
-		
-		lst = q.list();
-		
-		if (lst.size() != 0) {
-			return lst.getFirst();
-		}
-		return null;
+		return f;
 		
 	}
 

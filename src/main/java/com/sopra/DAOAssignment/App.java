@@ -48,18 +48,18 @@ public class App
 //    	
 //    	s.persist(furniture);
     	
-//    	FurnitureInventory f = fur.read(1);
-////    	
-//    	System.out.println(f);
+    	FurnitureInventory f = fur.read(1);
     	
-//    	List<FurnitureInventory> lst = new ArrayList<FurnitureInventory>();
-//    	
-//    	lst = fur.readAll();
-//    	
-//    	for(FurnitureInventory f : lst) {
-//    		
-//    		System.out.println(f);
-//    	}
+    	System.out.println(f);
+    	
+    	List<FurnitureInventory> lst = new ArrayList<FurnitureInventory>();
+    	
+    	lst = fur.readAll();
+    	
+    	for(FurnitureInventory f1 : lst) {
+    		
+    		System.out.println(f1);
+    	}
     	
     	String res = fur.delete(1);
     	
